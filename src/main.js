@@ -1,6 +1,11 @@
 import TextSign from './TextSign.js';
+import TextSign1 from './TextSign.js';
 
+console.log("AA'");
 const textSign = new TextSign();
+const textSign1 = new TextSign1();
+
+textSign1();
 
 const condition = true;
 // const condition = false;
