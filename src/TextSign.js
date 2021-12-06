@@ -1,11 +1,4 @@
-
-export  class Sk {
-	constructor() {
-		console.log("SSSSSSSSSSSSSSSSSS");
-	}
-}
-
-export default class TextSignx {
+export default class TextSign {
 	constructor() {
 		this.elem = document.createElement('div');
 		this.elem.classList.add('text-sign');
