@@ -9,5 +9,45 @@
 </head>
 <body>
 음 잘되고 있나요?	
+
+<script>
+	function Person(n, a) {
+		this.name = n||'이름없음';
+		this.age = a||'이름없음';
+	}
+	Person.getInfo = function (_this) {
+		return { name : _this.name,
+			age : _this.age
+		}
+	}
+	Person.prototype.getName = function () {
+		return this.name;
+	}
+	Person.prototype.setName = function (n) {
+		this.name = n;
+	}
+	var inPerson = new Person('a', 30);
+	var snPerson = Person.getInfo(inPerson);
+
+	function Employee (n,a,d) {
+		this.superClass(n,a);
+		this.dept = d||'이름없음';
+	}
+	// Employee.prototype = new Person();
+	// Employee.prototype.constructor = Employee;
+	// Employee.prototype.getDept = function () {
+	// 	return this.dept;
+	// }
+	
+	function Bridge() {};
+	Bridge.prototype = Person.prototype;
+	Employee.prototype = new Bridge();
+	Employee.prototype.constructor = Employee;
+	Employee.prototype.superClass = Person;
+	Employee.prototype.getDetp=function () {return this.dept}
+	
+	// var Em = new Employee("roy", 30, "CEO");
+</script>
+
 </body>
 </html>
