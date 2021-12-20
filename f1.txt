@@ -8,3 +8,7 @@ e
 remote star
 remote start2
 remote start3
+
+cho start 1
+cho start 2
+cho start 3
