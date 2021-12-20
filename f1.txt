@@ -4,3 +4,7 @@ c
 d
 e
 11
+
+remote star
+remote start2
+remote start3
